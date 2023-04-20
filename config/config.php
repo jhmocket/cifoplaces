@@ -6,7 +6,7 @@
  * 
  * Autor: Robert Sallent
  * Última revisión: 13/04/2023
- * Desde: 0.0.1
+ * Desde: patata
  * 
  */
    
