@@ -92,27 +92,33 @@ EOT;}
      * MENÚ
      *****************************************************************************/
     // retorna el menú principal
-    public static function getMenu(){ 
-        $html  = "<ul class='navBar'>";
-        $html .=   "<li><a href='/'>Inicio</a></li>";
-        
-        if(Login::isAdmin() && (DB_ERRORS || LOG_ERRORS || LOG_LOGIN_ERRORS))
-            $html .=   "<li><a href='/Error/list'>Errores</a></li>";
-        
-        $html .=   "<li><a href='/'>Foo</a></li>";
-        $html .=   "<li><a href='/'>Bar</a></li>";
-        $html .= "</ul>";
-
-        return $html;
-    } 
+        public static function getMenu(){
+            $html = "<ul class='navBar'>";
+            $html .= "<li><a href='/'>Start</a></li>";
+            
+            if(Login::isAdmin() && (DB_ERRORS || DB_LOGIN_ERRORS ||
+                LOG_ERRORS || LOG_LOGIN_ERRORS))
+                $html .= "<li><a href='/Error/list'>Errores</a></li>";
+                
+                if(Login::isAdmin())
+                    $html .= "<li><a href='/User/create'>Nuevo usuario</a></li>";
+                    
+                    $html .= "<li><a href='/Place/list'>Places</a></li>";
+                    $html .= "<li><a href='/Place/create'>New place</a></li>";
+                    $html .= "<li><a href='/Contact'>Contact</a></li>";
+                    $html .= "</ul>";
+                    
+                    return $html;
+                    
+                    EOT;}
         
     /*****************************************************************************
      * MIGAS
      *****************************************************************************/
     // retorna el elementos migas
     public static function getBreadCrumbs(array $migas = []):string{
-        // asegura que esté el enlace a Inicio
-        $migas = ["Inicio"=>"/"]+$migas; 
+        // asegura que esté el enlace a Start
+        $migas = ["Start"=>"/"]+$migas; 
         
         // preparamos el migas a partir del array 
         $html = "<nav aria-label='Breadcrumb' class='breadcrumbs'>";

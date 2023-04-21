@@ -17,7 +17,7 @@
         // recupera el nombre de la tabla, que será el nombre indicado en la propiedad
         // estática $table de la clase hija. En caso de no existir esta propiedad, 
         // la tabla será el nombre de la clase en minúsculas con una s al final
-        // Ejemplo: Libro --> libros
+        // Ejemplo: Libro --> places
         protected static function getTable():string{
             return get_called_class()::$table ?? strtolower(get_called_class()).'s';
         }
