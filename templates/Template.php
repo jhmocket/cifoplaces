@@ -94,7 +94,7 @@ EOT;}
     // retorna el menú principal
         public static function getMenu(){
             $html = "<ul class='navBar'>";
-            $html .= "<li><a href='/'>Start</a></li>";
+            $html .= "<li><a href='/'>Inicio</a></li>";
             
             if(Login::isAdmin() && (DB_ERRORS || DB_LOGIN_ERRORS ||
                 LOG_ERRORS || LOG_LOGIN_ERRORS))
@@ -103,9 +103,9 @@ EOT;}
                 if(Login::isAdmin())
                     $html .= "<li><a href='/User/create'>Nuevo usuario</a></li>";
                     
-                    $html .= "<li><a href='/Place/list'>Places</a></li>";
-                    $html .= "<li><a href='/Place/create'>New place</a></li>";
-                    $html .= "<li><a href='/Contact'>Contact</a></li>";
+                    $html .= "<li><a href='/Place/list'>Lugares</a></li>";
+                    $html .= "<li><a href='/Place/create'>Nuevo lugar</a></li>";
+                    $html .= "<li><a href='/Contacto'>Contacto</a></li>";
                     $html .= "</ul>";
                     
                     return $html;
@@ -253,8 +253,7 @@ EOT: '';}
     public static function getFooter(){
         return <<<EOT
         <footer class='primary'>
-            <p>Desarrollado por <a href="https://robertsallent.com">
-                Robert Sallent</a> para sus cursos de desarrollo de aplicaciones web (2023).
+            <p>Desarrollado en clase de aplicaciones web (2023).
             </p>
         </footer>
 EOT;} 

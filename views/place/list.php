@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title><?= APP_NAME ?></title>
-		<link rel="stylesheet" type="text/css" href="/css/estilo.css">
+		<?= Template::getCss() ?>
 	</head>
 	<body>
 		<?= Template::getLogin() ?>
@@ -15,6 +15,12 @@
 		<main>
     		<h1><?= APP_NAME ?></h1>
     		<h2>Lista completa de lugares</h2>
+    		
+    		//recuperar la lista de lugares
+    		//$places = Place::get();
+    		
+    		//carga la vista para mostrar la lista
+    		//require '../views/places/list.php';
 		
 		</main>
 		<?= Template::getFooter() ?>

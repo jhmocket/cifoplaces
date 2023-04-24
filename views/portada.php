@@ -13,10 +13,12 @@
 		<?= Template::getError() ?>
 		
 		<main>
-    		<h2>Portada de CIFO Places</h2>
-
+    		<h2>CIFO Places</h2>
+    		
+    		<p>Sitio web de CIFO Places.</p>
 		</main>
 		<?= Template::getFooter() ?>
 	</body>
 </html>
+
 

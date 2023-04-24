@@ -109,30 +109,35 @@
     define('USER_ROLES', [
         'Usuario'       => 'ROLE_USER',
         'Administrador' => 'ROLE_ADMIN',
-        'Supervisor'    => 'ROLE_SUPERVISOR',
-        'Editor'        => 'ROLE_EDITOR',
-        'Test'          => 'ROLE_TEST',
-        'API'           => 'ROLE_API'
+        'Moderador'     => 'ROLE_MODERADOR'
     ]);
     
     // rol para el administrador (debería ser uno de los que están en la lista anterior)
     define('ADMIN_ROLE', 'ROLE_ADMIN');
-
-    
-/* -------------------------------------------------------------
- * REDIRECCIONES
- * -------------------------------------------------------------*/
-    
-    // redirección tras login
-    define('REDIRECT_AFTER_LOGIN', '/');
-    
     
 /* -------------------------------------------------------------
  * PAGINADOR
  * -------------------------------------------------------------*/
     
     // para la paginación de resultados
-    define('RESULTS_PER_PAGE', 10);
+    define('RESULTS_PER_PAGE', 5);     //para la paginación de resultados
+    define('ADMIN_EMAIL', 'mocket@gmail.com');
+    
+    define('REDIRECT_AFTER_LOGIN', '/User/home');
+    
+    //carpeta para las portadas de los libros
+    define('BOOK_IMAGE_FOLDER', '/images/books');
+    
+    //imagen por defecto para las portadas de los libros
+    //buscad una imagen que os guste y colocarla en la carpeta
+    define('DEFAULT_BOOK_IMAGE', 'cover.png');
+    
+    //carpeta para las fotos de usuarios
+    define('USER_IMAGE_FOLDER', '/images/users');
+    
+    //buscad una imagen en la carpeta
+    define('DEFAULT_USER_IMAGE', 'userCover.png');
+    
     
     
     
